@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <script>
+        // Function to display the username
+        function displayWelcomeMessage() {
+            const user = JSON.parse(localStorage.getItem('user')); // Get user data from local storage
+            const welcomeMessage = document.getElementById('welcome-message');
+
+            if (user && user.displayName) {
+                welcomeMessage.textContent = `Welcome, ${user.displayName}!`;
+            } else {
+                welcomeMessage.textContent = "Welcome!";
+            }
+        }
+
+        // Show logout confirmation popup
+        function showLogoutConfirmation() {
+            document.getElementById('logout-popup').style.display = 'block';
+        }
+
+        // Close the logout confirmation popup
+        function closeLogoutPopup() {
+            document.getElementById('logout-popup').style.display = 'none';
+        }
+
+        // Perform logout and redirect to login page
+        function logout() {
+            localStorage.removeItem('user'); // Clear user data from local storage
+            window.location.href = 'login.html'; // Redirect to login page
+        }
+
+        function showContactUs(){   
+            window.location.href='contactUs.html';
+        }
+
+        // Run the function when the page loads
+        window.onload = displayWelcomeMessage;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chapter 1: Cookies, Cache, Disk Cleaning & File Management</h1>
+        </header>
+    
+        <!-- Chapter 1 -->
+        <section class="section">
+            <div class="chapter-number">Chapter 1</div>
+            <h2>Cookies, Cache, Disk Cleaning & File Management</h2>
+            <p>Cookies help websites remember your preferences, while clearing your cache can fix loading issues. Regular disk cleaning is important for system performance and file management ensures easier access to your data.</p>
+            <a href="chap1slide.html">
+                <button>Learn More</button>
+            </a>
+        </section>
+    
+        <!-- Chapter 2 -->
+        <section class="section">
+            <div class="chapter-number">Chapter 2</div>
+            <h2>Cybersecurity Awareness</h2>
+            <p>Understanding the importance of cybersecurity can protect your personal and work data from unauthorized access. Learn essential tips to stay safe online and secure your digital presence.</p>
+            <a href="chap2slide.html">
+                <button>Learn More</button>
+            </a>
+        </section>
+    
+        <!-- Chapter 3 -->
+        <section class="section">
+            <div class="chapter-number">Chapter 3</div>
+            <h2>Cloud Technology</h2>
+            <p>Cloud computing allows users to store and access data over the internet instead of a personal computer's hard drive. Learn how cloud storage and services are transforming businesses and personal tech.</p>
+            <a href="chap3slide.html">
+                <button>Learn More</button>
+            </a>
+        </section>
+    
+        <!-- Chapter 4 -->
+        <section class="section">
+            <div class="chapter-number">Chapter 4</div>
+            <h2>Digital Communication & Email Recognition</h2>
+            <p>Effective communication through email is essential in the modern workplace. Learn techniques for writing professional emails and recognize common email phishing attempts to safeguard your digital communication.</p>
+            <a href="chap4slide.html">
+                <button>Learn More</button>
+            </a>
+        </section>
+    
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Troubleshooting System. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
+    "vite": "^5.4.10"
+  }
+}
